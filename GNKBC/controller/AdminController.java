@@ -81,24 +81,20 @@ public class AdminController {
     @PostMapping("/postwriter")
     public String uploadPost(@RequestBody Post content, HttpServletRequest req){
 
-        log.info(content.getAuthor());
-        log.info(content.getTitle());
+        log.info("Post request from post writer by - "content.getAuthor());
 
         HttpSession session = req.getSession();
 
         Member member = adminUserService.getAdmin(session.getAttribute("admin-email").toString());
-
-        if(member.getRole() != Role.ADMIN){
-            log.info("Not Authorized user");
-        }
-
+     
         Post newPost = Post.createPost(member,content.getContent(),content.getTitle());
         newPost.setLocalDateTime(LocalDateTime.now());
+        
         adminPostService.savePost(newPost);
 
         return "redirect:/admin/postwriter";
     }
-
+   
     @GetMapping("/allposts")
     public String showAllPost(Model model){
         List<Post> posts = adminPostService.findAllPosts();
