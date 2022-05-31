@@ -16,8 +16,7 @@ import java.util.List;
 
 @SpringBootTest
 @Transactional
-//data CRUD by Entity manager must always be conducted in a transaction
-    //from transaction's begin to commit
+//data CRUD by Entity manager must always be conducted in from transaction's begin to commit
 class AdminPostServiceTest {
 
     @PersistenceContext
