@@ -72,6 +72,9 @@
       - sudo systemctl start docker
       - sudo docker pull [id]/[repo name]
       - sudo docker run -p 8080:8080 [id]/[name]
+      - DockerFile
+      
+<img width="333" alt="Screen Shot 2022-05-31 at 9 08 07 AM" src="https://user-images.githubusercontent.com/76544061/171180909-7de69295-e1a6-4d46-8125-40b034e980dc.png">
 
    ### Continue on Jenkins 
       * Gradle Plugin , Post build task plugin
