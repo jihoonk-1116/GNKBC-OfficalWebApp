@@ -35,17 +35,7 @@ public class StringRepository {
         StaticString newStaticString = new StaticString(key,userInput);
         staticStringStore.put(newStaticString.getTag(), newStaticString);
     }
-    public String readAllLines(BufferedReader reader) throws IOException {
-        StringBuilder content = new StringBuilder();
-        String line;
-
-        while ((line = reader.readLine()) != null) {
-            content.append(line);
-            content.append(System.lineSeparator());
-        }
-
-        return content.toString();
-    }
+  
     @PostConstruct
     private void loadFromJson() throws IOException {
         InputStream input = new FileInputStream(fileDir);
@@ -72,22 +62,37 @@ public class StringRepository {
     @PreDestroy
     private void saveToJson() {
         /**
-         * TODO - Write static string data in staticString.json as json data format
+         * Write static string data in staticString.json as json data format
          * use GSON
          */
         try {
+            
             OutputStream output = new FileOutputStream(fileDir);
-            //OutputStream output = new FileOutputStream("staticString.json");
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
-            //Writer writer = new FileWriter("src/main/resources/static/staticString.json");
             Gson gs = getGson();
+            
             gs.toJson(staticStringStore.values(), writer);
+            
             writer.close();
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    private String readAllLines(BufferedReader reader) throws IOException {
+        
+        StringBuilder content = new StringBuilder();
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            content.append(line);
+            content.append(System.lineSeparator());
+        }
+
+        return content.toString();
+    } 
+   
     private Gson getGson() {
         GsonBuilder gb = new GsonBuilder();
         gb.setPrettyPrinting();
