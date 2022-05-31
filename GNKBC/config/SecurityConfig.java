@@ -32,8 +32,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .authorizeRequests()
                     .antMatchers("/","/css/**","/images/**","/js/**"
                             ,"/h2-console/**","/static/**","/oauth/**","/admin/login").permitAll()
-//                    .antMatchers("/admin/**").hasRole(Role.ADMIN.name())
-//                    .anyRequest().authenticated()
+                   .antMatchers("/admin/**").hasRole(Role.ADMIN.name())
+                   .anyRequest().authenticated()
                 .and()
                     .logout()
                         .logoutSuccessUrl("/")
@@ -41,13 +41,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .oauth2Login()
                 .loginPage("/admin/login")
                     .userInfoEndpoint()
-//                    .userService(customOAuth2UserService)
+                   .userService(customOAuth2UserService)
                 .and()
                 .successHandler((request, response, authentication) -> {
 
                     CustomOAuth2User oauthUser = (CustomOAuth2User) authentication.getPrincipal();
                     if(adminService.processOAuthPostAdminLogin(oauthUser.getEmail())){
-                        HttpSession session = request.getSession(); //세션에 로그인 회원 정보 보관
+                        HttpSession session = request.getSession(); //save login infomation into user session 
                         session.setAttribute("admin-email",oauthUser.getEmail());
                         response.sendRedirect("/admin/home");
                     }else
