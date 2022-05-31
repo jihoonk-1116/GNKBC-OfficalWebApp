@@ -26,7 +26,7 @@
    * Spring Security
   ## Tools
    * AWS
-     -  AWS Lambda, EC2, RDS, 
+     -  AWS Lambda, EC2, RDS, S3
    * Testing
      - Postman, H2, Junit
    * IDE
