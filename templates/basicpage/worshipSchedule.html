@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intro title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+</head>
+<head th:replace="~{basicpage/fragments/libraries :: header}">
+</head>
+<body>
+    <div th:replace="~{basicpage/fragments/top-nav :: topbar}"></div>
+    <!--nav-->
+    <div th:replace="~{basicpage/fragments/top-nav :: nav}"></div>
+    <!--section-->
+<section>
+    <h1>worship schedule</h1>
+</section>
+</body>
+    <!--footer-->
+    <div th:replace="~{basicpage/fragments/footer :: footer}"></div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <div th:replace="~{basicpage/fragments/libraries :: js-assets}"></div>
+</html>
