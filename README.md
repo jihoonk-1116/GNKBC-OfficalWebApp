@@ -117,11 +117,11 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
    * REF: Persistence Context Flow
    * <img width="400" alt="Screen Shot 2022-05-23 at 2 05 17 PM" src="https://user-images.githubusercontent.com/76544061/169909971-7d2814d5-b3cb-4231-95a1-6cb3b3cd7879.png">
 
-    - TDD development 
-    - Post Test
+    - TDD development - click the below images to see the detail code
+    - Test post service
    <a href="https://github.com/jihoonk-1116/GNKBC-OfficalWebApp/edit/main/GNKBC/test/AdminPostServiceTest.java">![image](https://user-images.githubusercontent.com/76544061/171200905-edfd9be3-26b1-4052-b78d-9a246a19d7e8.png)</a>
    
-    - User Test
+    - Test user service
   <a href="https://github.com/jihoonk-1116/GNKBC-OfficalWebApp/blob/main/GNKBC/test/AdminUserServiceTest.java">![image](https://user-images.githubusercontent.com/76544061/171201114-bcc42958-310f-4d1b-b47f-27a4f81d712b.png)</a>
 
 
