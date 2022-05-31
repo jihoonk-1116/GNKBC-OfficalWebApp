@@ -144,14 +144,22 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
 
 
 # Step 4: Integration post writer with a rich text editor at frontend & jQuery AJAX
+      - Import rich text editor 
+      - <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />
+      - <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+   ![image](https://user-images.githubusercontent.com/76544061/171190884-a09c6472-f005-4993-ba7b-34cb4b3eabe7.png)
+   ![image](https://user-images.githubusercontent.com/76544061/171190807-e7bbe3a8-82fa-4520-9d42-b0dbbaf7ae07.png)
+   
+      - AJAX using JSON format to bind post Entity object 
+   ![image](https://user-images.githubusercontent.com/76544061/171191430-fb00be34-960a-464c-9441-0ad37bf3d33b.png)
 
-# Step 5: Design Relational Data Base UML
-   * Persistence Context Flow
-   * <img width="1302" alt="Screen Shot 2022-05-23 at 2 05 17 PM" src="https://user-images.githubusercontent.com/76544061/169909971-7d2814d5-b3cb-4231-95a1-6cb3b3cd7879.png">
 
-# Step 6: Implementation data & entity class using JPA and connecting with H2 database
+# Step 5: Implementation entity class using JPA and testing with H2 database
+   
 
 # Step 6: Member and Post CRUD operators using JPA 
+   * Persistence Context Flow
+   * <img width="400" alt="Screen Shot 2022-05-23 at 2 05 17 PM" src="https://user-images.githubusercontent.com/76544061/169909971-7d2814d5-b3cb-4231-95a1-6cb3b3cd7879.png">
   
 # Step 7: Development Contact us page using AWS Lambda
 
