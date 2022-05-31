@@ -195,6 +195,7 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
 
 # Step 9: Integration with AWS and Deployment 
      - Integration Spring with AWS RDS 
+     - * ddl-auto : create is only for developing environment !
 <img width="442" alt="KakaoTalk_20220531_102205727" src="https://user-images.githubusercontent.com/76544061/171202609-e2d720f6-0d9c-4bb7-aaf8-ff528b06fdba.png">
      
      - Check if SQL logs are created 
