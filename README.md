@@ -1,16 +1,13 @@
 # GNKBC-WebApp Development Log
+  <br>
   Full-Stack development for launching Grace New York Church's Offical Web application.
   
-  * Static Web page, Admin service, Bulletin service in Java Spring <br>
-  * Google Authentication
-  * contact us using AWS Lambda 
-  * CI&CD Deployment on AWS
-  
 # Requirements 
+
   - Cost efficient
   - Web App that is able to easily update church's information without a developer
   - Responsive Web App
-  - User Management
+  - User & Post Management
   - Design Java class following MVC (Model,View,Controller) pattern and OOP rules
   - RDB with JPA, Spring Data
   
@@ -24,23 +21,21 @@
   ## Backend
    * Java Spring framework
    * JPA
-   * RDB
-   * JSON
+   * RDB - MariaDB
    * Spring Data
    * Spring Security
-  ## Tools 
-   * Lombok
-   * Postman 
-   * InteliJ
-   * Junit
-   * Gson
-   * Gradle
-   * AWS Lambda
-   * Docker
-   * H2
-   * JenKins
-   * EC2
-   * Git
+  ## Tools
+   * AWS
+     -  AWS Lambda, EC2, RDS, 
+   * Testing
+     - Postman, H2, Junit
+   * IDE
+     - VScode, InteliJ
+   * Build & Deployment tools
+     - Gradle, Docker, Jenkins, Git
+   * In Spring
+     - Gson, Lombok, Google Auth API, Slf4j, JSON
+  
 
 # Step 1: Static web page 
   ## TODO & Completion
