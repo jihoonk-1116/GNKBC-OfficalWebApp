@@ -19,8 +19,9 @@ public class ImageRepository {
     private final FileStore fileStore;
 
     private final HashMap<String, ArrayList<String>> pathMap;
-    private int carouselCount = 2;
-    private int activityCount = 5;
+    
+    private int carouselCount = 2; //max 3 images
+    private int activityCount = 5; //max 6 activities
 
 
     public void save(String tag, String path){
@@ -29,15 +30,19 @@ public class ImageRepository {
             pathMap.put(tag, new ArrayList<>());
 
         while(pathMap.get(tag).size() > carouselCount ||
-                pathMap.get(tag).size() > activityCount){
-
-            String fullPath = fileStore.getFullPath(pathMap.get(tag).get(0));
+                pathMap.get(tag).size() > activityCount)
+        {
+            //Remove the first one 
+            String fullPath = fileStore.getFullPath(pathMap.get(tag).get(0)); 
             File removedFile = new File(fullPath);
+            
             log.info("Delete " + fullPath);
+            
             removedFile.delete();
             pathMap.get(tag).remove(0);
-        }
-
+            
+        } //end while
+        //save image
         pathMap.get(tag).add(path);
     }
 
