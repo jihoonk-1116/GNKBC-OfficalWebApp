@@ -93,7 +93,9 @@
    - Select Frontend template that is using Bootstrap, Jquery
    - Integration with Thymeleaf in order to use the pre-built template with Spring framework
    - Communication with the design team in GNKBC to optimize and improve website's view
-# Step 2: Basic Admin page
+# Step 2: Admin Application
+![image](https://user-images.githubusercontent.com/76544061/171186187-626a1689-3d64-442b-92d9-f8075dfcc1b9.png)
+
   ## TODO & Completion
    - Admin service for someone who is not developer
    - JSON storage for storing static string data in order to keep static data and reflect data modification without a Relational Data Base
@@ -103,13 +105,43 @@
    - Keep MVC & OOP pattern for maintenance and prevent entire system faliure caused by a single point of faliure
    - Stricted follow the dependent flow: Controller - Service - Repository 
   ## Development Note
-   - @Qualifier
-   - @PostConstruct , @PreDestroy
-   - GSON
+   - @Qualifier : Same Interface injection, but different usage of its implementation
+   - They are about bean's life cycle : @PostConstruct - after creating bean , @PreDestroy - before destory bean  
+     -> The method must not have parameter 
+   - GSON : libraries to handle JSON data in Java
   ## Static String Data Management
-    - 
+    - Load Static String from JSON storage 
+   ![image](https://user-images.githubusercontent.com/76544061/171183106-db99bde6-173c-4924-9688-f8e418b7012b.png)
+    
+    - uploadString(key, input) - Change static string data using key(tag), and user input 
+    - getContentMap()
+   ![image](https://user-images.githubusercontent.com/76544061/171183568-890eff6c-449a-44fb-b698-73fbd8691d85.png)
+   
+    - when terminating the static repository,
+   ![image](https://user-images.githubusercontent.com/76544061/171184132-7d8e6579-ccbc-4f11-a9a9-bcc0651f1283.png)
+
   ## Static Image File Management
+    - save() 
+  ![image](https://user-images.githubusercontent.com/76544061/171187108-184905b0-eb73-48e8-a18c-a34e51ed53e4.png)
+
+  
+  
 # Step 3: Authentication via Google and Configuration Spring security
+ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-example 
+
+      - permit all of static assets and public infomation
+      - request authentication when an user's trying to access admin application
+  ![image](https://user-images.githubusercontent.com/76544061/171188129-ba7e4800-b7a3-4bf2-92e7-c70453cbde8c.png)
+  
+      - if success to get authentication from Google,
+      - but it's not authorized admin -> login fail
+      - it's admin -> set a new Session , redirect admin home 
+  ![image](https://user-images.githubusercontent.com/76544061/171188673-3f2daf4f-4430-4233-b2e1-3cead42cd3ae.png)
+      
+      - then, every admin related request is checked by AuthInterceptor
+      
+   ![image](https://user-images.githubusercontent.com/76544061/171189296-ba24b5e3-3295-4132-8154-2d31e7ba3584.png)
+
 
 # Step 4: Integration post writer with a rich text editor at frontend & jQuery AJAX
 
