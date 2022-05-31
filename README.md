@@ -73,8 +73,7 @@
       - sudo docker pull [id]/[repo name]
       - sudo docker run -p 8080:8080 [id]/[name]
       - DockerFile
-      
-<img width="333" alt="Screen Shot 2022-05-31 at 9 08 07 AM" src="https://user-images.githubusercontent.com/76544061/171180909-7de69295-e1a6-4d46-8125-40b034e980dc.png">
+     <img width="333" alt="Screen Shot 2022-05-31 at 9 08 07 AM" src="https://user-images.githubusercontent.com/76544061/171180909-7de69295-e1a6-4d46-8125-40b034e980dc.png">
 
    ### Continue on Jenkins 
       * Gradle Plugin , Post build task plugin
@@ -85,7 +84,7 @@
      <img width="356" alt="Screen Shot 2022-05-30 at 8 17 14 PM" src="https://user-images.githubusercontent.com/76544061/171070401-cc6b04b7-e668-43a2-8a8b-d7345a905733.png">
        
        * Git webhook - url : http://[ec2 IP]:8080/github-webhook/
-    <img width="537" alt="Screen Shot 2022-05-30 at 8 19 23 PM" src="https://user-images.githubusercontent.com/76544061/171070773-46d53587-ff06-47f2-a5f5-b5d7a6bfc6df.png">
+     <img width="537" alt="Screen Shot 2022-05-30 at 8 19 23 PM" src="https://user-images.githubusercontent.com/76544061/171070773-46d53587-ff06-47f2-a5f5-b5d7a6bfc6df.png">
       
    
 
