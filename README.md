@@ -38,8 +38,10 @@
   
 
 # Step 1: Static web page 
+![image](https://user-images.githubusercontent.com/76544061/171215599-6e51167f-0e52-4079-bc59-a82704be9720.png)
+
   ## TODO & Completion
-   - Select Frontend template that is using Bootstrap, Jquery
+   - Selected Frontend template that is using Bootstrap, Jquery
    - Integration with Thymeleaf in order to use the pre-built template with Spring framework
    - Communication with the design team in GNKBC to optimize and improve website's view
 # Step 2: Admin Application
