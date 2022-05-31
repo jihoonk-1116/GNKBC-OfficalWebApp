@@ -50,10 +50,4 @@ public class UserRepository {
                 .setParameter("role", Role.ADMIN)
                 .getResultList();
     }
-
-    public List<Member> findAllUser(){
-        return em.createQuery("select m from Member m where m.role = :role",Member.class)
-                .setParameter("role", Role.USER)
-                .getResultList();
-    }
 }
