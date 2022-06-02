@@ -117,7 +117,10 @@ public class AdminController {
     }
 
     @PostMapping("/uploadimage/{tag}")
-    public String uploadImage(@PathVariable String tag, @RequestParam("imageFiles") List<MultipartFile> imgFiles, HttpServletRequest req, Model model) throws IOException {
+    public String uploadImage(@PathVariable String tag, 
+                              @RequestParam("imageFiles") List<MultipartFile> imgFiles, 
+                              HttpServletRequest req, Model model) throws IOException 
+    {
         model = adminStaticService.uploadImages(tag, imgFiles, model);
         return "redirect:/admin/home";
     }
@@ -135,13 +138,7 @@ public class AdminController {
         return "/adminpage/windows/getStringFromUser";
     }
 
-    /**
-     * take key(ex..introduction, header) and string data from user
-     * @param content
-     * @param tag
-     * @param redirectAttributes
-     * @return
-     */
+  
     @PostMapping("/getwindow/{tag}")
     public String changeStaticString(@RequestParam("content") String content, @RequestParam("tag") String tag, RedirectAttributes redirectAttributes){
 
