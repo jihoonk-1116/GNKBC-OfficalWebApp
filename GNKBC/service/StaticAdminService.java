@@ -73,15 +73,5 @@ public class StaticAdminService implements AdminService{
         model.addAttribute("imgPathMap",imageRepository.getPathMap());
         return model;
     }
-//    @Override
-//    public boolean processOAuthPostAdminLogin(String username) {
-//        log.info("adminservice == " + username);
-//        if(username.equals("mynoja3@gmail.com")){
-//            return true;
-//        }
-//        else
-//            return false;
-//
-//    }
 
 }
