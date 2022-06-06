@@ -92,6 +92,10 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
       - then, every admin related request is checked by AuthInterceptor
       
    ![image](https://user-images.githubusercontent.com/76544061/171189296-ba24b5e3-3295-4132-8154-2d31e7ba3584.png)
+      
+      - Interceptor
+      
+   ![image](https://user-images.githubusercontent.com/76544061/172164658-2446e2c0-f414-4b45-a8f9-d174480565c1.png)
 
 
 # Step 4: Integration post writer with a rich text editor at frontend & jQuery AJAX
@@ -119,7 +123,7 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
 
     - TDD development - click the below images to see the detail code
     - Test post service
-   <a href="https://github.com/jihoonk-1116/GNKBC-OfficalWebApp/edit/main/GNKBC/test/AdminPostServiceTest.java">![image](https://user-images.githubusercontent.com/76544061/171200905-edfd9be3-26b1-4052-b78d-9a246a19d7e8.png)</a>
+   <a href="https://github.com/jihoonk-1116/GNKBC-OfficalWebApp/blob/main/GNKBC/test/AdminPostServiceTest.java">![image](https://user-images.githubusercontent.com/76544061/171200905-edfd9be3-26b1-4052-b78d-9a246a19d7e8.png)</a>
    
     - Test user service
   <a href="https://github.com/jihoonk-1116/GNKBC-OfficalWebApp/blob/main/GNKBC/test/AdminUserServiceTest.java">![image](https://user-images.githubusercontent.com/76544061/171201114-bcc42958-310f-4d1b-b47f-27a4f81d712b.png)</a>
@@ -195,7 +199,7 @@ ref: https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-ex
 
 # Step 9: Integration with AWS and Deployment 
      - Integration Spring with AWS RDS 
-     - * ddl-auto : create is only for developing environment !
+     - * "ddl-auto : create" is only for developing environment !
 <img width="442" alt="KakaoTalk_20220531_102205727" src="https://user-images.githubusercontent.com/76544061/171202609-e2d720f6-0d9c-4bb7-aaf8-ff528b06fdba.png">
      
      - Check if SQL logs are created 
