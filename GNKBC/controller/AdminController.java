@@ -88,8 +88,7 @@ public class AdminController {
         Member member = adminUserService.getAdmin(session.getAttribute("admin-email").toString());
      
         Post newPost = Post.createPost(member,content.getContent(),content.getTitle());
-        newPost.setLocalDateTime(LocalDateTime.now());
-        
+      
         adminPostService.savePost(newPost);
 
         return "redirect:/admin/postwriter";
