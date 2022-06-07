@@ -54,7 +54,6 @@ public class StaticAdminService implements AdminService{
 
         for (StaticImage staticImage : fileStore.storeFile(imageList)) {
             imageRepository.save(tag, staticImage.getStoreFileName());
-            System.out.println(staticImage.getStoreFileName());
         }
 
         model.addAttribute("imgPathMap", imageRepository.getPathMap());
