@@ -12,7 +12,7 @@
   - RDB with JPA, Spring Data
   
 
-# Stack
+# Tech Stacks
   ## Frontend
    * Thymeleaf - SSR with Spring framework
    * Jquery
